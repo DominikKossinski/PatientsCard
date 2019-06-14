@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.SelectFragment">
+
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/patientSwipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="parent">
+
+            <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:padding="@dimen/padding"
+                            android:background="@drawable/rect_with_rounded_border">
+
+                        <TextView
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.AppCompat.Headline"
+                                android:text="@string/patient_data"/>
+
+                        <TextView
+                                android:id="@+id/addressTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.AppCompat.Headline"
+                                android:layout_margin="@dimen/margin"/>
+
+                        <TextView
+                                android:id="@+id/cityTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.AppCompat.Headline"
+                                android:layout_margin="@dimen/margin"/>
+
+                        <TextView
+                                android:id="@+id/postalCodeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.AppCompat.Headline"
+                                android:layout_margin="@dimen/margin"/>
+
+                        <TextView
+                                android:id="@+id/stateTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.AppCompat.Headline"
+                                android:layout_margin="@dimen/margin"/>
+
+                        <TextView
+                                android:id="@+id/countryTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.AppCompat.Headline"
+                                android:layout_margin="@dimen/margin"/>
+
+
+                        <TextView
+                                android:id="@+id/phoneTextView"
+                                android:layout_margin="@dimen/margin"
+                                style="@style/TextAppearance.AppCompat.Headline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+
+                    <Button
+                            android:background="@drawable/rect_with_rounded_border"
+                            android:id="@+id/bodyWeightButton"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Headline"
+                            android:text="@string/bodyWeight"/>
+
+                    <Button
+                            android:background="@drawable/rect_with_rounded_border"
+                            android:id="@+id/bodyMassIndexButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Headline"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:text="@string/bodyMassIndex"/>
+
+                    <Button
+                            android:background="@drawable/rect_with_rounded_border"
+                            android:id="@+id/bodyHeightButton"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Headline"
+                            android:text="@string/bodyHeight"/>
+
+                    <Button
+                            android:background="@drawable/rect_with_rounded_border"
+                            android:id="@+id/systolicBloodPressureButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Headline"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:text="@string/systolicBloodPressure"/>
+
+
+                    <Button
+                            android:background="@drawable/rect_with_rounded_border"
+                            android:id="@+id/diastolicBloodPressureButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Headline"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:text="@string/diastolicBloodPressure"/>
+
+                    <Button
+                            android:background="@drawable/rect_with_rounded_border"
+                            android:id="@+id/allObservationsButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Headline"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:text="@string/all_observations"/>
+
+                    <Button
+                            android:background="@drawable/rect_with_rounded_border"
+                            android:id="@+id/medicationRequestsButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Headline"
+                            android:layout_margin="@dimen/margin_16dp"
+                            android:text="@string/medications_requests"/>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>
